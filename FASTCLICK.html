@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="about" style="width: 100%;height: 200px;background: #004D40;">
+			aaaa
+		</div>
+		<script src="../bootstrap/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="fastclick.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+			    FastClick.attach(document.body);
+			    $("#about").click(function(){
+			    	alert(2)
+			    })
+			    var arr = [{"d1":"11","d2":"22"}];
+			    console.log(typeof(JSON.stringify(arr)));
+			    
+			});
+			
+			//js写法
+			/*if ('addEventListener' in document) {
+			    document.addEventListener('DOMContentLoaded', function() {
+			        FastClick.attach(document.body);
+			    }, false);
+			}*/
+			
+			
+			//如果你使用的browserify CommonJS的模块系统或另一种风格，
+			//其fastclick.attach函数将返回 require(‘fastclick’) 。
+			//作为一个结果，使用fastclick这些装载机的最简单的方法如下：
+			/*var attachFastClick = require('fastclick');
+			attachFastClick(document.body);*/
+		</script>
+	</body>
+</html>
